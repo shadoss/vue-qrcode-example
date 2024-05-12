@@ -1,0 +1,112 @@
+@import './base.css';
+
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-weight: normal;
+}
+
+a,
+.green {
+    text-decoration: none;
+    color: hsla(160, 100%, 37%, 1);
+    transition: 0.4s;
+    padding: 3px;
+}
+
+@media (hover: hover) {
+    a:hover {
+        background-color: hsla(160, 100%, 37%, 0.2);
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        display: flex;
+        place-items: center;
+    }
+
+    #app {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 2rem;
+    }
+}
+
+/* QR Code */
+header {
+    line-height: 1.5;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+.qrcode {
+    display: inline-block;
+    font-size: 0;
+    margin-bottom: 0;
+    position: relative;
+}
+
+.qrcode__image {
+    background-color: #fff;
+    border: 0.25rem solid #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+    height: 15%;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+}
+
+#main {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: inherit;
+}
+
+#main h3 {
+    display: flex;
+    align-self: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+}
+
+#info {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 5px;
+}
+
+#info p {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    header {
+        display: flex;
+        place-items: center;
+        padding-right: calc(var(--section-gap) / 2);
+    }
+
+    .logo {
+        margin: 0 2rem 0 0;
+    }
+
+    header .wrapper {
+        display: flex;
+        place-items: flex-start;
+        flex-wrap: wrap;
+    }
+}
